@@ -1,0 +1,40 @@
+{% extends "frame.html" %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+        <form method="post" action="{{ url_for('tasks') }}">
+          
+            <div class="my-4">
+              <button type="submit" value="Stop/Start" name="stop" class="btn btn-primary text-dark btn-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+                </svg>
+                Camera
+                </button>
+                <img class="img-fluid rounded-4  border border-3" src="{{ url_for('video_feed') }}" height="80%">
+              </div>     
+        </form>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 col-xxl-6 my-5">
+        <h1 class="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+            <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"/>
+          </svg>
+          Sign Langauge Recognition
+        </h1>
+        <p>Click on the camera button to turn on the camera and begin the recognition</p>
+
+        <div class="justify-content-center">
+          <p class="text-dark">{{recognized_strings}}</p>
+          <form method="post" action="{{ url_for('clear_recognized_string') }}">
+          <button type="submit" class="btn btn-primary">Clear String</button>
+          </form>
+        </div>
+      </div>
+      
+  </div>
+
+</div>
+
+{% endblock %}

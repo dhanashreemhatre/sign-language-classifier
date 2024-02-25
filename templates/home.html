@@ -1,0 +1,65 @@
+{% extends "frame.html" %}
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/images/Sign-language-banner.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block">
+            <h5>"The voice may be silent, but the hands speak volumes."</h5>
+            <p>- Unknown </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/images/AdobeStock_259785024-1024x683.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block">
+            <h5>"The deaf can hear with their eyes, and the blind can see with their hands."</h5>
+            <p> - Unknown</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+  <div class="text-center my-5">
+    <h1 class="display-4">About</h1>
+    <hr class="w-25 mx-auto"/>
+    </div>
+  <div class="container">
+    <div class="row my-5">
+      <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+        <figure>
+          <img src="static/images/data/asl-2.jpg" class="img-fluid about-img">
+        </figure>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 col-xxl-6 d-flex justify-content-center align-items-start flex-column">
+        <h1>Sign Language</h1>
+        <p>
+          Sign languages play an important role in the deaf community, enabling individuals to communicate effectively and participate fully in social, educational, and professional settings. They are also valued for their unique cultural contributions and the unique perspectives they offer on the nature of language and communication.
+          <br>
+          Sign languages play an important role in the deaf community, enabling individuals to communicate effectively and participate fully in social, educational, and professional settings. They are also valued for their unique cultural contributions and the unique perspectives they offer on the nature of language and communication.
+          <br>
+It is important to note that sign language is not a universal language and is not equivalent to gestures or mime. Each sign language is a complete, standalone language in its own right, with its own linguistic rules and structure.
+        </p>
+        <button type="button" class="btn btn-outline-info">more info</button>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
